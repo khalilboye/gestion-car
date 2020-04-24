@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Cars List List</h2>
+  </div>
+  <button class="btn btn-info" type="button" [routerLink]="'/car/create/'">Create new product</button>
+  <div class="panel-body">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom Car</th>
+      <th>Marque</th>
+      <th>modele</th>
+      <th>Date mis en Circulation</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{car.id}}</td>
+      <td>{{car.libelle}}</td>
+      <td>{{car.marque}}</td>
+      <td>{{car.modele}}</td>
+      <td>{{car.dateMiseCirculation}}</td>
+      <td>
+        <button (click)="deleteCar(car.id)" class="btn btn-danger">Delete</button>
+        <button (click)="carDetails(car.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        <button (click)="updateDetails(car.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
