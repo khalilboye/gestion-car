@@ -17,6 +17,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { HomeComponent } from './car/home/home.component';
+import {CarCrudModule} from "./car-crud/car-crud.module";
+import { SearchComponent } from './car/search/search.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     ContentComponent,
     CarComponent,
     MainNavComponent,
+    HomeComponent,
+    SearchComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,6 +47,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    CarCrudModule
 
   ],
   providers: [],
